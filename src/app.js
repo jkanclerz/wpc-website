@@ -24,41 +24,10 @@ const s3 = new AWS.S3({
     region: bucketRegion
 });
 
-const storage = new StorageFacade(s3, auth)
-
-document.getElementById('testS3').addEventListener('click', () => {
-    storage.listAll();
-})
-
-document.getElementById('testUpload').addEventListener('click', () => {
-    auth.refreshCredentials();
-    const files = document.getElementById('files').files;
-
-    if (!files.length) {
-        return alert('Please choose a file to upload first.');
-    }
-    var file = files[0];
-    storage.uploadFile(
-        file,
-        (result) => {
-            const liElement = document.createElement('li');
-            liElement.innerHTML = result.key;
-
-            document.querySelector('#photoList')
-                .appendChild(liElement);
-
-            console.log(result);
-        },
-        (currentPorgress) => {
-            console.log(`i am ${currentPorgress} of 100 done`);
-        }
-    );
-})
-
 const registerUserRequest = {
-    username: 'kanclerj-test1',
-    password: '123qwehahahaha',
-    email: 'j.a.k.u.b.k.a.n.c.l.e.rz+test1@gmail.com',
+    username: '',
+    password: '',
+    email: '',
     name: 'Wine The Pooh'
 }
 
