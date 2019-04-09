@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "webpack && webpack-dev-server --mode development",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "bash deploy.sh {{your_bucket}}"
   }
 }
