@@ -4,7 +4,6 @@ import AWS from 'aws-sdk';
 
 import {poolData, region, bucketRegion, bucketName, IdentityPoolId, LoginProviderName} from './env'
 import AuthFacade from './user/user-facade';
-import StorageFacade from './storage/storage-facade';
 
 const userPool = new CognitoUserPool(poolData);
 const creds = new AWS.CognitoIdentityCredentials({
@@ -53,15 +52,4 @@ confirmBtn.addEventListener('click', () => {
         username: registerUserRequest.username,
         code: '1234567'
     });
-})
-
-
-
-document.querySelector('#testRegister').addEventListener('click', () => {
-    const registerRequest = Array.from(document.querySelector('form'))
-        .map((i) => { return {v: i.value, k: i.getAttribute('name')}})
-        .reduce((result, current) => Object.assign(result, current));
-
-    console.log(registerRequest);
-
 })
