@@ -3,10 +3,23 @@
   "version": "1.0.0",
   "dependencies": {
     "amazon-cognito-identity-js": "^3.0.9",
-    "aws-sdk": "^2.419.0"
+    "aws-sdk": "^2.419.0",
+    "bootstrap": "^4.3.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "yeticss": "^7.4.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
