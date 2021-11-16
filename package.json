@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "amazon-cognito-identity-js": "^3.0.9",
-    "aws-sdk": "^2.419.0",
+    "aws-sdk": "^2.814.0",
     "bootstrap": "^4.3.1",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.8.6",
